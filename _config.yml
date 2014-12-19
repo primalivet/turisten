@@ -1,7 +1,6 @@
 name: Turisten
 safe: true
 lsi: false
-pygments: true
 baseurl: /turisten
 exclude: [node_modules]
 permalink: /:year/:month/:title

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="article">
+
+  {% if page.image %}
+
+    <header class="article__header fullscreen-img" style="background-image: url('{{ page.image }}');">
+      <div class="fullscreen-img__overlay">
+        <h1 class="huge-title huge-title--with-divider">{{ page.title }}</h1>
+      </div>
+    </header>
+
+  {% else %}
+
+    <header class="article__header">
+      <h1 class="huge-title huge-title--with-divider">{{ page.title }}</h1>
+    </header>
+
+  {% endif%}
+
+  <div class="article__body">
+    {{ content }}
+  </div>
+
+</article>

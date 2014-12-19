@@ -1,0 +1,13 @@
+/**
+* BREAKPOINTS MIXIN
+* ============================================================================
+*
+*/
+
+$bp1: 320px;
+$bp2: 640px;
+$bp3: 760px;
+
+@mixin bp($breakpoint) {
+  @media (min-width: $breakpoint) { @content; }
+}
