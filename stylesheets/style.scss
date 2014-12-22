@@ -3,9 +3,16 @@
 
 @import 'mixin.breakpoints';
 @import 'base.normalize';
-@import 'component.fullscreen-image';
 
 $base-spacing: 1.8rem;
+
+$size-xxxlarge: 48px;
+$size-xxlarge: 36px;
+$size-xlarge: 24px;
+$size-large: 20px;
+$size-medium: 16px; // 1em browser default.
+$size-small: 14px;
+$size-xsmall: 12px;
 
 body {
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
@@ -20,48 +27,56 @@ h1,h2,h3,h4,h5,h6,p {
   margin: 0;
   margin-bottom: $base-spacing;
 }
+.article__header {
+  padding-top: $base-spacing;
+}
 
-.huge-title {
-  margin: 0 auto;
-  padding: 10vh $base-spacing;
-  font-family: 'Pacifico';
-  font-weight: normal;
-  font-size: 12vw;
-  line-height: 1.1;
-  text-align: center;
+.article__header--with-img {
+  position: relative;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 75%;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include bp($bp2) {
-    font-size: 10vw;
-    padding: 12vh $base-spacing;
-  }
-
-  @include bp($bp3) {
-    font-size: 6vw;
-    padding: 20vh $base-spacing;
+    padding-bottom: 56.25%;
   }
 
 }
 
-  .huge-title--inverted-color {
-    color: white;
+.article__title {
+  text-align: center;
+  font-size: $size-xlarge;
+
+  @include bp($bp1) {
+    font-size: $size-xxlarge;
   }
 
-  .huge-title--with-divider:after {
-    content: ' ';
-    position: relative;
-    bottom: -5vh;
-    display: block;
-    width: 25%;
-    max-width: 200px;
-    height: 0;
-    margin: 0 auto;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 0.25em;
+  @include bp($bp2) {
+    font-size: $size-xxxlarge;
+  }
+
+}
+
+  .article__title--on-img {
+    position: absolute;
+    //padding-top: 37.5%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: $base-spacing;
+    color: white;
+
+    @include bp($bp2) {
+      //padding-top: 28.125%;
+    }
+
   }
 
 .article__body {
-  padding-top: 10vh;
   p {
     max-width: 37rem + $base-spacing;
     margin-left: auto;

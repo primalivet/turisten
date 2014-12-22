@@ -2,7 +2,7 @@ name: Turisten
 safe: true
 lsi: false
 baseurl: /turisten
-exclude: [node_modules]
+exclude: [node_modules, README.md]
 permalink: /:year/:month/:title
 timezone: Europe/Stockholm
 paginate: 15

@@ -5,16 +5,14 @@ layout: default
 
   {% if page.image %}
 
-    <header class="article__header fullscreen-img" style="background-image: url('{{ page.image }}');">
-      <div class="fullscreen-img__overlay">
-        <h1 class="huge-title huge-title--with-divider">{{ page.title }}</h1>
-      </div>
+    <header class="article__header article__header--with-img" style="background-image: url('{{ page.image }}');">
+        <h1 class="article__title article__title--on-img">{{ page.title }}</h1>
     </header>
 
   {% else %}
 
     <header class="article__header">
-      <h1 class="huge-title huge-title--with-divider">{{ page.title }}</h1>
+      <h1 class="article__title">{{ page.title }}</h1>
     </header>
 
   {% endif%}
